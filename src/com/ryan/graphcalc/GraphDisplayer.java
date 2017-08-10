@@ -292,7 +292,6 @@ public class GraphDisplayer {
     xAxis.setStroke(Color.BLACK);
     plotArea.getChildren().add(xAxis);
 
-    //NumberFormat numberFormat = new
     // add labels to the axis
     Text boundaryTxt0 = new Text(mLeftMargin - 7, mScreenHeight / 2 + topMargin + 15, String.format("%.2f", -maxRange));
     plotArea.getChildren().add(boundaryTxt0);

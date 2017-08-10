@@ -88,7 +88,6 @@ public class GraphCalcControl {
     // close the window when Close is pressed
     @FXML
     private void handleClosePressed(ActionEvent actionEvent) {
-        System.out.println("handleClosePressed");
         ((Stage) anchorPane.getScene().getWindow()).close();
     }
 
