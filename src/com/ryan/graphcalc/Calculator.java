@@ -67,9 +67,6 @@ public class Calculator {
         // remove from front of queue so only last 10 are kept
         if(answers.size() > NUM_HISTORY_RESULTS) { answers.remove(); }
 
-        // equation browser index resets when they entered an equation
-        mHistoryBrowserIndex = answers.size();
-
         // return final answer (solution)
         return ans;
     }
@@ -260,6 +257,9 @@ public class Calculator {
         answers.add(ge);
         // remove first from front of queue
         if(answers.size() > NUM_HISTORY_RESULTS) { answers.remove(); }
+
+        // equation browser index resets when they entered an equation
+        mHistoryBrowserIndex = answers.size();
     }
 
     // get a past result, how far back depends on parameter

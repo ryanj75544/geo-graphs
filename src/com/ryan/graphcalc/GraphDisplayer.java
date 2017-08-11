@@ -293,17 +293,22 @@ public class GraphDisplayer {
     plotArea.getChildren().add(xAxis);
 
     // add labels to the axis
-    Text boundaryTxt0 = new Text(mLeftMargin - 7, mScreenHeight / 2 + topMargin + 15, String.format("%.2f", -maxRange));
+    Text boundaryTxt0 = new Text(mLeftMargin - 7, mScreenHeight / 2 + topMargin + 15,
+                                              String.format("%.2f", -maxRange));
     plotArea.getChildren().add(boundaryTxt0);
-    Text boundaryTxt1 = new Text(mLeftMargin - 7 + mScreenWidth * 1 / 4, mScreenHeight / 2 + topMargin + 15, String.format("%.2f", -maxRange * 0.5));
+    Text boundaryTxt1 = new Text(mLeftMargin - 7 + mScreenWidth * 1 / 4, mScreenHeight / 2 + topMargin + 15,
+                                              String.format("%.2f", -maxRange * 0.5));
     plotArea.getChildren().add(boundaryTxt1);
-    Text boundaryTxt2 = new Text(mLeftMargin - 7 + mScreenWidth * 3 / 4, mScreenHeight / 2 + topMargin + 15, String.format("%.2f", maxRange * 0.5));
+    Text boundaryTxt2 = new Text(mLeftMargin - 7 + mScreenWidth * 3 / 4, mScreenHeight / 2 + topMargin + 15,
+                                              String.format("%.2f", maxRange * 0.5));
     plotArea.getChildren().add(boundaryTxt2);
-    Text boundaryTxt3 = new Text(mScreenWidth + topMargin - 7, mScreenHeight / 2 + topMargin + 15, String.format("%.2f", maxRange));
+    Text boundaryTxt3 = new Text(mScreenWidth + topMargin - 7, mScreenHeight / 2 + topMargin + 15,
+                                              String.format("%.2f", maxRange));
     plotArea.getChildren().add(boundaryTxt3);
 
     // add line at left boundary to use as reference point
-    Line boundaryLine0 = new Line(mLeftMargin, mScreenHeight / 2 + topMargin - 3, mLeftMargin, mScreenHeight / 2 + topMargin + 3);
+    Line boundaryLine0 = new Line(mLeftMargin, mScreenHeight / 2 + topMargin - 3,
+                          mLeftMargin, mScreenHeight / 2 + topMargin + 3);
     boundaryLine0.setStrokeWidth(1);
     boundaryLine0.setStroke(Color.BLACK);
     plotArea.getChildren().add(boundaryLine0);
@@ -325,7 +330,6 @@ public class GraphDisplayer {
     // add line at right boundary
     Line boundaryLine3 = new Line(mLeftMargin + mScreenWidth, mScreenHeight / 2 + topMargin - 3,
             mLeftMargin + mScreenWidth, mScreenHeight / 2 + topMargin + 3);
-
     boundaryLine3.setStrokeWidth(1);
     boundaryLine3.setStroke(Color.BLACK);
     plotArea.getChildren().add(boundaryLine3);
@@ -341,7 +345,8 @@ public class GraphDisplayer {
 
     // draw vertical line across window for y-axis
     //Line YAxis = new Line(screenWidth / 2, 5, screenWidth / 2, 505);
-    Line YAxis = new Line(mScreenWidth / 2 + mLeftMargin, topMargin, mScreenWidth / 2 + mLeftMargin, mScreenHeight + topMargin);
+    Line YAxis = new Line(mScreenWidth / 2 + mLeftMargin, topMargin,
+            mScreenWidth / 2 + mLeftMargin, mScreenHeight + topMargin);
 
     //Line YAxis = new Line(305, 5, 305, 505);
     YAxis.setStrokeWidth(1.0f);
@@ -350,13 +355,17 @@ public class GraphDisplayer {
     plotArea.getChildren().add(YAxis);
 
     // add labels to the axis for reference
-    Text boundaryTxt0 = new Text(mScreenWidth / 2 + mLeftMargin + 5, topMargin + 5, String.format("%.2f", maxRange));
+    Text boundaryTxt0 = new Text(mScreenWidth / 2 + mLeftMargin + 5, topMargin + 5,
+                                                String.format("%.2f", maxRange));
     plotArea.getChildren().add(boundaryTxt0);
-    Text boundaryTxt1 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight / 4 + topMargin + 5 , String.format("%.2f", maxRange * 0.5));
+    Text boundaryTxt1 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight / 4 + topMargin + 5 ,
+                                                String.format("%.2f", maxRange * 0.5));
     plotArea.getChildren().add(boundaryTxt1);
-    Text boundaryTxt2 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight * 3 / 4 + topMargin + 5, String.format("%.2f", -maxRange * 0.5));
+    Text boundaryTxt2 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight * 3 / 4 + topMargin + 5,
+                                                String.format("%.2f", -maxRange * 0.5));
     plotArea.getChildren().add(boundaryTxt2);
-    Text boundaryTxt3 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight + 0 + topMargin, String.format("%.2f", -maxRange));
+    Text boundaryTxt3 = new Text(mScreenWidth / 2 + mLeftMargin + 5, mScreenHeight + 0 + topMargin,
+                                                String.format("%.2f", -maxRange));
     plotArea.getChildren().add(boundaryTxt3);
 
     // add horizontal line #1 (maximum Y)
