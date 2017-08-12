@@ -59,15 +59,11 @@ public class Calculator {
         ans = GraphEquation.roundDouble(ans, 6);
 
         // add answer to end of queue
-        answers.add(new GraphEquation(mOriginalEquation, ans));
+        addEnteredEquation(mOriginalEquation, ans);
 
         // reset original equation
         setOriginalEquation("");
 
-        // remove from front of queue so only last 10 are kept
-        if(answers.size() > NUM_HISTORY_RESULTS) { answers.remove(); }
-
-        // return final answer (solution)
         return ans;
     }
 
